@@ -168,7 +168,7 @@ Sample json-file:
 
 Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 
-**Current features**
+
 *	Unlimited shortcodes
 *	Comes without annoying standard shortcodes
 *	choose your own description for every code
@@ -183,6 +183,7 @@ Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 * something
 * something else
 * third thing
+
 
 
 
