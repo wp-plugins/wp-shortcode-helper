@@ -21,7 +21,7 @@ Always check your json-file for validation-errors! http://jsonlint.com/
 
 Sample json-file:
 
-'
+`
 [{
 		"text": "Button",
 		"value": "btn",
@@ -164,7 +164,7 @@ Sample json-file:
 			}
 		]
 	}]
-'
+`
 
 Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 
