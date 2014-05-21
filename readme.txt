@@ -168,7 +168,7 @@ Sample json-file:
 
 Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 
-fdssdafdsafasd
+Features:
 
 *	Unlimited shortcodes
 *	Comes without annoying standard shortcodes
@@ -176,17 +176,12 @@ fdssdafdsafasd
 *	multiple input-fields for attributes
 
 
-**Coming soon**
+Comming soon
+
 *	edit shortcodes using the WordPress backend
 *	multilingual descriptions
 *	better description
 *	more input-fields
-* something
-* something else
-* third thing
-
-
-
 
 == Installation ==
 
