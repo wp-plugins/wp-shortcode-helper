@@ -180,6 +180,9 @@ Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 *	multilingual descriptions
 *	better description
 *	more input-fields
+* something
+* something else
+* third thing
 
 
 
