@@ -22,7 +22,152 @@ Always check your json-file for validation-errors! http://jsonlint.com/
 Sample json-file:
 
 '
+[
 
+	{
+		"text": "Button",
+		"value": "btn",
+		"content": true,
+		"description": true,
+		"description_text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+		"options": [
+			{
+				"type": "textbox",
+				"name": "href",
+				"label": "URL"
+			},
+			{
+				"type": "select",
+				"name": "blank",
+				"label": "New Tab",
+				"options": [
+					{
+						"text": "No",
+						"value": "no"
+					},
+					{
+						"text": "Yes",
+						"value": "yes"
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"text": "1/2 Column",
+		"value": "one_half",
+		"content": true,
+		"description": true,
+		"description_text": "Creates a 1/2 column",
+		"options": [
+			{
+				"type": "select",
+				"name": "position",
+				"label": "Position",
+				"options": [
+					{
+						"text": "First",
+						"value": "first"
+					},
+					{
+						"text": "Last",
+						"value": "last"
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"text": "1/3 Column",
+		"value": "one_third",
+		"content": true,
+		"description": true,
+		"description_text": "Creates a 1/3-Column",
+		"options": [
+			{
+				"type": "select",
+				"name": "position",
+				"label": "Position",
+				"options": [
+					{
+						"text": "First",
+						"value": "first"
+					},
+					{
+						"text": "Last",
+						"value": "last"
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"text": "2/3 Column",
+		"value": "two_third",
+		"content": true,
+		"description": true,
+		"description_text": "Creates a 2/3-Column",
+		"options": [
+			{
+				"type": "select",
+				"name": "position",
+				"label": "Position",
+				"options": [
+					{
+						"text": "First",
+						"value": "first"
+					},
+					{
+						"text": "Last",
+						"value": "last"
+					}
+				]
+			}
+		]
+	},
+
+	{
+		"text": "Tabwrapper",
+		"value": "tabwrapper",
+		"description": true,
+		"content": true,
+		"description_text": "Creates a Wrapper for Tabs"
+	},
+
+	{
+		"text": "Tab",
+		"value": "tab",
+		"content": true,
+		"description": true,
+		"description_text": "Creates a Tab",
+		"options": [
+			{
+				"type": "select",
+				"name": "active",
+				"label": "Active",
+				"options": [
+					{
+						"text": "Yes",
+						"value": "yes"
+					},
+					{
+						"text": "No",
+						"value": "no"
+					}
+				]
+			},
+			{
+				"type": "textbox",
+				"name": "title",
+				"label": "Title"
+			}
+		]
+	}
+
+]
 '
 
 Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
