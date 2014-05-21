@@ -3,7 +3,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: shortcode, tinymce, button, helper, backend, javascript, popup
 Requires at least: 3.9
 Tested up to: 3.9.1
-Stable tag: 0.9
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,10 +21,8 @@ Always check your json-file for validation-errors! http://jsonlint.com/
 
 Sample json-file:
 
-'
-[
-
-	{
+`
+[{
 		"text": "Button",
 		"value": "btn",
 		"content": true,
@@ -165,25 +163,23 @@ Sample json-file:
 				"label": "Title"
 			}
 		]
-	}
-
-]
-'
+	}]
+`
 
 Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 
 **Current features**
-* Unlimited shortcodes
-* Comes without annoying standard shortcodes
-* choose your own description for every code
-* multiple input-fields for attributes
+*	Unlimited shortcodes
+*	Comes without annoying standard shortcodes
+*	choose your own description for every code
+*	multiple input-fields for attributes
 
 
 **Coming soon**
-* edit shortcodes using the WordPress backend
-* multilingual descriptions
-* better description
-* more input-fields
+*	edit shortcodes using the WordPress backend
+*	multilingual descriptions
+*	better description
+*	more input-fields
 
 
 
