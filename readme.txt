@@ -168,6 +168,7 @@ Sample json-file:
 
 Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 
+fdssdafdsafasd
 
 *	Unlimited shortcodes
 *	Comes without annoying standard shortcodes
