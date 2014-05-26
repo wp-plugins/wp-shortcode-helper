@@ -21,6 +21,10 @@ jQuery(document).ready(function () {
                 //Shortcode-Name
                 var shortcode_name = val.value;
 
+                //Hide Content Field
+                var hideContentInput = val.hideContentInput;
+                console.log(hideContentInput);
+
                 //Options?
                 var options;
                 if (typeof val.options !== 'undefined') {
@@ -73,6 +77,12 @@ jQuery(document).ready(function () {
                                 name: val.name,
                                 label: val.label
                             });
+                        } else if(val.type == 'label') {
+                            body.push({
+                                type: 'label',
+                                name: val.name,
+                                text: val.text
+                            });
                         } else {
                             body.push({
                                 type: val.type,
@@ -85,7 +95,7 @@ jQuery(document).ready(function () {
                     });
                 }
 
-                if (content && typeof val.hideContentInput != 'undefined' && val.hideContentInput == 'true') {
+                if (content === true && hideContentInput !== true) {
                     body.push({
                         type: 'textbox',
                         name: 'content',
@@ -97,10 +107,16 @@ jQuery(document).ready(function () {
                 }
                 if (description) {
                     body.push({
-                        type: 'button',
-                        name: 'description',
+                        type: 'label',
+                        name: 'description_headline',
                         text: 'Description',
-                        tooltip: val.description_text
+                        style: 'font-size: 18px; font-weight: bold; margin-top: 10px; margin-bottom: 10px;'
+                    });
+                    body.push({
+                        type: 'label',
+                        name: 'description',
+                        text: val.description_text,
+                        style: 'height:auto !important;max-height:80px;max-width: 100%;word-wrap:break-word;overflow: scroll;white-space:normal;line-height: 16px !important;margin-top: 10px;',
                     });
                 }
 
@@ -120,7 +136,7 @@ jQuery(document).ready(function () {
 
                             if (options) {
                                 jQuery.each(e.data, function (key, val) {
-                                    if (key != 'content' && key != 'description') {
+                                    if (key != 'content' && key != 'description' && key != 'description_headline') {
                                         shortcode += ' ' + key + '="' + val + '"';
                                     }
                                 });
