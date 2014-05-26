@@ -2,7 +2,7 @@
 /*
 Plugin Name: WordPress Shortcode-Helper
 Author: Yanik Peiffer
-Version: 1.0
+Version: 1.1
 
 Makes the usage of Shortcodes for Clients easier.
 
