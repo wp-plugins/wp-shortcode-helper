@@ -11,18 +11,45 @@ Make your shortcodes easy to use for everyone. Doesn't matter how many or how co
 
 == Description ==
 
-WordPress Shortcode-Helper is the best way to make your shortcodes easier for everyone. Developers know how many different shortcodes are needed developing a modern custom theme. Now the user does not have to read a whole guide before using their theme. They can select one of the available codes, enter the attributes via inputs and the complete code gets copied to the editor. 
+WordPress Shortcode-Helper is a plugin that helps you to make your shortcodes easier for clients. Make them avialble through a dropdown-list in the WordPress-Editor.
 
-Better for developers, better for users.
+Features include:
+
+*	Unlimited shortcodes
+*	Comes without annoying standard shortcodes
+*	Choose your own description for every code
+*	Multiple input-fields for attributes
+*	Many settings to provide the best UI for your shortcodes
+
+Comming soon:
+
+*	Edit shortcodes using the WordPress backend
+*	Multilingual descriptions
+*	More input-fields
+*	Any ideas? 
+
+
 
 First, you activate the plugin and create a json-file in your template-folder. This file contains the information about every shortcode with its attributes and descriptions. Then, the plugin creates a dropdown in your editor with the list of all available codes. That's it!
+
+Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
+
+== Installation ==
+
+
+1. Upload `Shortcode-Helper` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Create the file 'shortcodes.json' in your template-folder
+4. Copy the example-code to 'shortcodes.json' and edit it for your purpose
 
 Always check your json-file for validation-errors! http://jsonlint.com/
 
 Sample json-file:
 
 `
-[{
+[
+
+	{
 		"text": "Button",
 		"value": "btn",
 		"content": true,
@@ -56,6 +83,7 @@ Sample json-file:
 		"text": "1/2 Column",
 		"value": "one_half",
 		"content": true,
+		"hideContentInput": true,
 		"description": true,
 		"description_text": "Creates a 1/2 column",
 		"options": [
@@ -81,6 +109,7 @@ Sample json-file:
 		"text": "1/3 Column",
 		"value": "one_third",
 		"content": true,
+		"hideContentInput": true,
 		"description": true,
 		"description_text": "Creates a 1/3-Column",
 		"options": [
@@ -106,6 +135,7 @@ Sample json-file:
 		"text": "2/3 Column",
 		"value": "two_third",
 		"content": true,
+		"hideContentInput": true,
 		"description": true,
 		"description_text": "Creates a 2/3-Column",
 		"options": [
@@ -132,6 +162,7 @@ Sample json-file:
 		"value": "tabwrapper",
 		"description": true,
 		"content": true,
+		"hideContentInput": true,
 		"description_text": "Creates a Wrapper for Tabs"
 	},
 
@@ -140,6 +171,7 @@ Sample json-file:
 		"value": "tab",
 		"content": true,
 		"description": true,
+		"hideContentInput": true,
 		"description_text": "Creates a Tab",
 		"options": [
 			{
@@ -163,35 +195,15 @@ Sample json-file:
 				"label": "Title"
 			}
 		]
-	}]
+	}
+
+]
 `
 
-Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
-
-Features:
-
-*	Unlimited shortcodes
-*	Comes without annoying standard shortcodes
-*	choose your own description for every code
-*	multiple input-fields for attributes
-
-
-Comming soon
-
-*	edit shortcodes using the WordPress backend
-*	multilingual descriptions
-*	better description
-*	more input-fields
-
-== Installation ==
-
-
-1. Upload `Shortcode-Helper` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
-3. Create the file 'shortcodes.json' in your template-folder
-4. Copy the example-code to 'shortcodes.json' and edit it for your purpose
-
 == Frequently Asked Questions ==
+
+= Will I have to change my shortcodes? =
+The shortcode-helper is just a wrapper for your shortcodes. That means you code your shortcodes as normally, edit the `shortcodes.json` and the plugin copies the correct shortcode into the editor.
 
 == Screenshots ==
 
@@ -199,3 +211,8 @@ Comming soon
 2. Popup for attributes
 
 == Changelog ==
+
+= Version 1.1 =
+*	Now you can hide the content-input in the popup
+*	New description-area
+*	Cleanup
