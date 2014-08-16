@@ -2,8 +2,8 @@
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZU9TXHEWGX9EJ
 Tags: shortcode, tinymce, button, helper, backend, javascript, popup
 Requires at least: 3.9
-Tested up to: 3.9.1
-Stable tag: 1.1
+Tested up to: 3.9.2
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,7 @@ Comming soon:
 
 
 
-First, you activate the plugin and create a json-file in your template-folder. This file contains the information about every shortcode with its attributes and descriptions. Then, the plugin creates a dropdown in your editor with the list of all available codes. That's it!
+First, you activate the plugin and create a json-file in the root of your template-folder or in the plugin-folder (standard directory is the root of your template-folder but you can change this in the settings of the plugin). This file contains the information about every shortcode with its attributes and descriptions. Then, the plugin creates a dropdown in your editor with the list of all available codes. That's it!
 
 Requires WordPress 3.9 and TinyMCE 4(automatically used by Wordpress 3.9)
 
@@ -211,6 +211,11 @@ The shortcode-helper is just a wrapper for your shortcodes. That means you code 
 2. Popup for attributes
 
 == Changelog ==
+
+= Version 1.2 =
+*	Change directory of the json-file (choose between template- or plugin-folder)
+*	Fixed javascript-errors
+*	Cleanup
 
 = Version 1.1 =
 *	Now you can hide the content-input in the popup
