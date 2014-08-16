@@ -166,15 +166,19 @@ jQuery(document).ready(function () {
         return values;
     }
 
-    tinymce.PluginManager.add('shortcode_button', function (editor, url) {
+    if(typeof tinymce != 'undefined') {
+        tinymce.PluginManager.add('shortcode_button', function (editor, url) {
 
-        var values = getValues(editor);
+            var values = getValues(editor);
 
-        editor.addButton('shortcode_button', {
-            title: 'Shortcodes',
-            icon: 'wp_code',
-            type: 'menubutton',
-            menu: values,
+            editor.addButton('shortcode_button', {
+                title: 'Shortcodes',
+                icon: 'wp_code',
+                type: 'menubutton',
+                menu: values,
+            });
         });
-    });
+    }
+
+    
 });
