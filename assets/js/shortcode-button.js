@@ -77,6 +77,13 @@ jQuery(document).ready(function () {
                                 name: val.name,
                                 label: val.label
                             });
+                        } else if (val.type == 'media') {
+                            body.push({
+                                type: 'textbox',
+                                name: val.name,
+                                label: val.label,
+                                classes: 'media_upload'
+                            });
                         } else if(val.type == 'label') {
                             body.push({
                                 type: 'label',
@@ -122,6 +129,8 @@ jQuery(document).ready(function () {
 
                 //Listbox-Element Text
                 list_el.text = val.text;
+                
+                list_el.classes = 'sdfsdfsd';
 
                 //Listbox-Element Value
                 list_el.value = val.value;
@@ -147,7 +156,7 @@ jQuery(document).ready(function () {
 
                             //If content exists
                             if (content) {
-                                if (typeof val.hideContentInput != 'undefined' && val.hideContentInput == 'true') {
+                                if (typeof val.hideContentInput == 'undefined' || val.hideContentInput != 'true') {
                                     shortcode += e.data.content;
                                 }
                                 shortcode += '[/' + shortcode_name + ']';
@@ -179,6 +188,24 @@ jQuery(document).ready(function () {
             });
         });
     }
+    
+    jQuery(document).on('click', '.mce-media_upload', function() {
+        var input_field = jQuery(this);
+        
+        window.send_to_editor = function(html) {
+            var image_url = jQuery('img',html).attr('src');
+            input_field.val(image_url);
+            tb_remove();
+        }
+        
+        tb_show('Choose media', 'media-upload.php?referer=wptuts-settings&type=image&TB_iframe=true&post_id=0', false);
+        jQuery('#TB_window').addClass('z_index');
+        return false;
+    });
+    
+    jQuery(document).on('click', '#TB_closeAjaxWindow', function() {
+        tb_remove();
+    });
 
     
 });
