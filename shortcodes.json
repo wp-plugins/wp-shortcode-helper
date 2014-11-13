@@ -33,11 +33,6 @@
                 "name":"img",
                 "label":"Image"
             },
-            {
-                "type":"media",
-                "name":"img",
-                "label":"Image"
-            }
 		]
 	}
 
