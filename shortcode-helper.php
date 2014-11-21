@@ -2,7 +2,7 @@
 /*
 Plugin Name: WordPress Shortcode-Helper
 Author: Yanik Peiffer
-Version: 1.3
+Version: 1.3.1
 
 Makes the usage of Shortcodes for Clients easier.
 
@@ -36,8 +36,8 @@ function add_tinymce_button() {
     if ( !current_user_can('edit_posts') && !current_user_can('edit_pages') ) {
    	return;
     }
-    if( ! in_array( $typenow, array( 'post', 'page' ) ) )
-        return;
+    //if( ! in_array( $typenow, array( 'post', 'page' ) ) )
+    //    return;
   	if ( get_user_option('rich_editing') == 'true') {
   		add_filter("mce_external_plugins", "add_plugin");
   		add_filter('mce_buttons', 'register_button');

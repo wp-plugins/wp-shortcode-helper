@@ -3,7 +3,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: shortcode, tinymce, button, helper, backend, javascript, popup
 Requires at least: 3.9
 Tested up to: 4.0
-Stable tag: 1.3
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -217,6 +217,10 @@ The shortcode-helper is just a wrapper for your shortcodes. That means you code 
 2. Popup for attributes
 
 == Changelog ==
+
+= Version 1.3.1 =
+*	Added button to custom post types
+*	New icon
 
 = Version 1.3 =
 *	Fixed js-errors
