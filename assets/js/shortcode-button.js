@@ -129,8 +129,6 @@ jQuery(document).ready(function () {
 
                 //Listbox-Element Text
                 list_el.text = val.text;
-                
-                list_el.classes = 'sdfsdfsd';
 
                 //Listbox-Element Value
                 list_el.value = val.value;
@@ -182,7 +180,7 @@ jQuery(document).ready(function () {
 
             editor.addButton('shortcode_button', {
                 title: 'Shortcodes',
-                icon: 'wp_code',
+                icon: 'lightbulb',
                 type: 'menubutton',
                 menu: values,
             });

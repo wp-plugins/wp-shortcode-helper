@@ -1,3 +1,8 @@
 .z_index {
     z-index: 200000 !important;
 }
+
+.mce-ico.mce-i-lightbulb {
+	background: url(../img/lightbulb.png) center center no-repeat;
+	background-size: cover !important;
+}
