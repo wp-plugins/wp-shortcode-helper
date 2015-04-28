@@ -6,3 +6,89 @@
 	background: url(../img/lightbulb.png) center center no-repeat;
 	background-size: cover !important;
 }
+
+.sh_input {
+	clear: both;
+	margin-bottom: 5px;
+}
+
+.sh_input label {
+	display: inline-block;
+	width: 40%;
+	float: left;
+}
+.sh_input input, .sh_input textarea, .sh_input select {
+	width: 50%;
+}
+.sh_input textarea {
+	height: 100px;
+}
+
+.sh_input .add_input_wrapper select {
+	width: auto;
+}
+
+.sh_option {
+	background: #f2f2f2;
+	margin: 10px 30px;
+	padding: 10px;
+}
+.sh_option .title {
+	background: #bbb;
+	margin: -10px -10px 10px;
+	padding: 5px;
+	font-size: 16px;
+}
+
+.sh_select_option {
+	margin-top: 5px;
+}
+.sh_select_option input {
+	width: 40%;
+}
+
+.sh_input_defaults {
+	display: none;
+}
+
+#sh_shortcode_form input[type=submit] {
+	margin: 20px 0px 0px;
+}
+
+#sh_jsonResult {
+	display: none;
+	width: 100%;
+	height: 250px;
+}
+
+.sh_tab {
+	display: none;
+}
+.sh_tab.active {
+	display: block;
+}
+.sh_tabs_list {
+	border-bottom: 1px solid #bbb;
+}
+.sh_tabs_list li {
+	display: inline-block;
+	margin-bottom: 0px;
+}
+.sh_tabs_list a {
+  display: block;
+  padding: 10px 15px;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid #bbb;
+  border-bottom: 0;
+}
+
+.sh_tabs_list a.active {
+	background: #bbb;
+}
+
+.card.shortcode .delete_card {
+	margin: 10px 0px 15px;
+	display: block;
+}

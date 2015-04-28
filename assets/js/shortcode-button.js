@@ -205,5 +205,142 @@ jQuery(document).ready(function () {
         tb_remove();
     });
 
+    /************************
+        JSON-EDIT ACTIONS
+    *************************/
+
+    jQuery(document).on('click', '.remove_input_option', function() {
+        jQuery(this).parents('.sh_option').remove();
+        return false;
+    });
+
+    jQuery(document).on('click', '.remove_select_option', function() {
+        jQuery(this).parents('.sh_select_option').remove();
+        return false;
+    });
+
+    jQuery(document).on('click', '.delete_card', function() {
+        jQuery(this).parents('.card.shortcode').remove();
+        return false;
+    });
+
+    jQuery(document).on('click', '.add_input', function() {
+
+        var input_div = jQuery(this).parents('.sh_input');
+        var type = input_div.find('.options_select').val();
+        var html = jQuery('.sh_'+type+'_default').html();
+
+        input_div.find('.inputs').append(html);
+
+        return false;
+    });
+
+
+    jQuery(document).on('click', '.add_select_option', function() {
+        var input_div = jQuery(this).parent('.sh_input');
+        var html = jQuery('.sh_select_option_default').html();
+
+
+        input_div.append(html);
+
+        return false;
+    });
+
+    jQuery(document).on('click', '.add_new_card', function() {
+        var input_div = jQuery(this).parents('#sh_shortcode_form');
+        var html = jQuery('.sh_card_default').html();
+
+
+        jQuery(html).insertAfter(jQuery(this).parents('.card'));
+
+        return false;
+    });
+
+
+    //create json-string
+    jQuery(document).on('submit', '#sh_shortcode_form', function() {
+        
+        var form = jQuery(this);
+        var data = new Array();
+
+        form.find('.card.shortcode').each(function(e) {
+            data[e] = {};
+            var el = jQuery(this);
+
+            data[e]['text'] = el.find('[name=text]').val();
+            data[e]['value'] = el.find('[name=value]').val();
+
+            if(el.find('[name=content]').val() == 'true') {
+                data[e]['content'] = true;
+            }
+            
+
+            if(el.find('[name=hideContentInput]').val() != 'false') {
+                data[e]['hideContentInput'] = true;
+            }
+            
+            if(el.find('[name=description]').val() == 'true') {
+                data[e]['description'] = true;
+            }
+            //data[e]['description'] = el.find('[name=description]').val();
+            data[e]['description_text'] = el.find('[name=description_text]').val();
+
+            //inputs
+            if(el.find('.inputs .sh_option').length > 0) {
+
+                data[e]['options'] = {};
+
+                el.find('.inputs .sh_option').each(function(f) {
+
+                    data[e]['options'][f] = {};
+
+                    var option = jQuery(this);
+
+                    data[e]['options'][f]['type'] = option.find('[name=type]').val();
+                    data[e]['options'][f]['name'] = option.find('[name=name]').val();
+                    data[e]['options'][f]['label'] = option.find('[name=label]').val();
+
+                    if(option.find('.sh_select_option').length > 0) {
+
+                        data[e]['options'][f]['options'] = {};
+
+                        option.find('.sh_select_option').each(function(b) {
+
+                            var select_option_el = jQuery(this);
+
+                            data[e]['options'][f]['options'][b] = {};
+
+                            data[e]['options'][f]['options'][b]['text'] = select_option_el.find('[name=select_option_text]').val();
+                            data[e]['options'][f]['options'][b]['value'] = select_option_el.find('[name=select_option_value]').val();
+
+
+                        });
+
+                    }
+
+                });
+
+            }
+        });
+
+        var jsonString = JSON.stringify(data);
+
+        jQuery('#sh_jsonResult').val(jsonString).show();
+
+        return false;
+    });
+
+
+    jQuery('.sh_tabs_list a').click(function() {
+        var tab = jQuery(this).attr('href');
+
+        jQuery('.sh_tabs_list a.active, .sh_tab.active').removeClass('active');
+
+        jQuery(tab).addClass('active');
+        jQuery(this).addClass('active');
+
+        return false;
+    });
+
     
 });
